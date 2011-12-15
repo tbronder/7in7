@@ -7,7 +7,7 @@ split_list([Head|[]], [Head], []).
 split_list([Head1|[Head2|Tail]], X, Y) :- split_list(Tail, A, B), append([Head1], A, X), append([Head2], B, Y).
 
 /*
- * merges two lists together, smallest to largest
+ * merges two ordered lists together, smallest to largest
  */
 merge([], [], []).
 merge(A, [], A).
